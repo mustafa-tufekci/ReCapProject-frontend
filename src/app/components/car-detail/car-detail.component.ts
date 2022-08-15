@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CarDetail } from 'src/app/models/carDetail';
+import { CarImage } from 'src/app/models/carImage';
 import { CardetailService } from 'src/app/services/cardetail.service';
 
 @Component({
@@ -30,5 +31,10 @@ export class CarDetailComponent implements OnInit {
       this.carDetails = response.data;
       this.dataLoaded = true;
     });
+  }
+
+  getPhotoClass(image: CarImage) {
+    return "active carousel-item"
+    return "carousel-item"
   }
 }
